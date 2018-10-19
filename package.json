@@ -1,0 +1,11 @@
+{
+  "name": "node-serverless-response",
+  "version": "0.0.0",
+  "description": "Serverless Framework Http Response Helper",
+  "main": "index.js",
+  "repository": "https://github.com/LifiPlus/node-serverless-response.git",
+  "author": "ZTron <info@z-tron.net>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
