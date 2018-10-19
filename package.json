@@ -7,5 +7,7 @@
   "author": "ZTron <info@z-tron.net>",
   "license": "MIT",
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "eslint": "^5.7.0"
+  }
 }
