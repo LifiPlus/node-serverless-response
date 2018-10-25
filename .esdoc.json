@@ -1,0 +1,8 @@
+{
+  "source": "./Response",
+  "destination": "./document",
+  "plugins": [
+    {"name": "esdoc-standard-plugin"},
+    {"name": "esdoc-node"}
+  ]
+}
