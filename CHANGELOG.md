@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [1.1.0] - 2018-10-29
 ### Added
 - Add jest testing
+- Travis CI
 
 ### Changed
 - Fix some typo
