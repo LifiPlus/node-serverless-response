@@ -11,7 +11,8 @@
   "url": "https://github.com/LifiPlus/node-serverless-response/issues",
   "main": "index.js",
   "scripts": {
-    "esdoc": "esdoc"
+    "esdoc": "esdoc",
+    "test": "jest"
   },
   "repository": "https://github.com/LifiPlus/node-serverless-response.git",
   "author": "ZTron <info@z-tron.net>",
