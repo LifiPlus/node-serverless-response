@@ -78,7 +78,7 @@ class Response {
    * @return {Object|String} - Please see {@link _buildResponse} for more detail
    */
   forbidden (body, isCors = false) {
-    return this.buildResponse (403, body, isCors)
+    return this._buildResponse (403, body, isCors)
   }
 
   /**
@@ -98,7 +98,7 @@ class Response {
    * @return {Object|String} - Please see {@link _buildResponse} for more detail
    */
   methodNotAllowed (body, isCors = false) {
-    return this._buildResponse (405, body, icCors)
+    return this._buildResponse (405, body, isCors)
   }
 
   /**
