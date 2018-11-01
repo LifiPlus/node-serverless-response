@@ -24,14 +24,15 @@ class Response {
     let headers = {}
 
     if (body.constructor === Object) {
+      headers['Content-Type'] = 'application/json;charset=utf-8'
       body = JSON.stringify(body)
+    } else {
+      headers['Content-Type'] = 'text/plain;charset=utf-8'
     }
 
     if (isCors) {
-      headers = {
-        'Access-Control-Allow-Origin': '*', 
-        'Access-Control-Allow-Credentials': true
-      }
+      headers['Access-Control-Allow-Origin'] = '*'
+      headers['Access-Control-Allow-Credentials'] = true
     }
 
     return {
