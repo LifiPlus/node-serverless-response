@@ -4,8 +4,11 @@
   "description": "Serverless Framework Http Response Helper",
   "keywords": [
     "serverless",
-    "http",
-    "response"
+    "http-response",
+    "aws",
+    "aws-lambda",
+    "aws-apigateway",
+    "aws-api-gateway",
   ],
   "homepage": "https://github.com/LifiPlus/node-serverless-response",
   "url": "https://github.com/LifiPlus/node-serverless-response/issues",
@@ -15,7 +18,7 @@
     "test": "jest"
   },
   "repository": "https://github.com/LifiPlus/node-serverless-response.git",
-  "author": "ZTron <info@z-tron.net>",
+  "author": " Shawn OY<shawn.oy@z-tron.net>",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
