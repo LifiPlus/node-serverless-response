@@ -1,50 +1,89 @@
 const Response = require('../Response')
 const _Response = new Response()
 
+let textTemplate = {
+  body: 'Test Success',
+  headers: {
+    'Content-Type': 'text/plain;charset=utf-8'
+  }
+}
+
+let textWithCorsTemplate = {
+  body: 'Test Success',
+  headers: {
+    'Content-Type': 'text/plain;charset=utf-8',
+    'Access-Control-Allow-Credentials': true,
+    'Access-Control-Allow-Origin': '*'
+  }
+}
+
 test('Build success response', () => {
-  expect(_Response.success('Test Success')).toMatchObject({body: 'Test Success', headers: {}, statusCode: 200})
+  textTemplate.statusCode = 200
+
+  expect(_Response.success('Test Success')).toMatchObject(textTemplate)
 })
 
 test('Build success response with CORS', () => {
-  expect(_Response.success('Test Success', true)).toMatchObject({"body": "Test Success", "headers": {"Access-Control-Allow-Credentials": true, "Access-Control-Allow-Origin": "*"}, "statusCode": 200})
+  textWithCorsTemplate.statusCode = 200
+
+  expect(_Response.success('Test Success', true)).toMatchObject(textWithCorsTemplate)
 })
 
 test('Build bad request response', () => {
-  expect(_Response.badRequest('Test Success')).toMatchObject({body: 'Test Success', headers: {}, statusCode: 400})
+  textTemplate.statusCode = 400
+
+  expect(_Response.badRequest('Test Success')).toMatchObject(textTemplate)
 })
 
 test('Build bad request response with CORS', () => {
-  expect(_Response.badRequest('Test Success', true)).toMatchObject({"body": "Test Success", "headers": {"Access-Control-Allow-Credentials": true, "Access-Control-Allow-Origin": "*"}, "statusCode": 400})
+  textWithCorsTemplate.statusCode = 400
+
+  expect(_Response.badRequest('Test Success', true)).toMatchObject(textWithCorsTemplate)
 })
 
 test('Build unauthorized response', () => {
-  expect(_Response.unauthorized('Test Success')).toMatchObject({body: 'Test Success', headers: {}, statusCode: 401})
+  textTemplate.statusCode = 401
+  expect(_Response.unauthorized('Test Success')).toMatchObject(textTemplate)
 })
 
 test('Build unauthorized response with CORS', () => {
-  expect(_Response.unauthorized('Test Success', true)).toMatchObject({"body": "Test Success", "headers": {"Access-Control-Allow-Credentials": true, "Access-Control-Allow-Origin": "*"}, "statusCode": 401})
+  textWithCorsTemplate.statusCode = 401
+
+  expect(_Response.unauthorized('Test Success', true)).toMatchObject(textWithCorsTemplate)
 })
 
 test('Build forbidden response', () => {
-  expect(_Response.forbidden('Test Success')).toMatchObject({body: 'Test Success', headers: {}, statusCode: 403})
+  textTemplate.statusCode = 403
+
+  expect(_Response.forbidden('Test Success')).toMatchObject(textTemplate)
 })
 
 test('Build forbidden response with CORS', () => {
-  expect(_Response.forbidden('Test Success', true)).toMatchObject({"body": "Test Success", "headers": {"Access-Control-Allow-Credentials": true, "Access-Control-Allow-Origin": "*"}, "statusCode": 403})
+  textWithCorsTemplate.statusCode = 403
+
+  expect(_Response.forbidden('Test Success', true)).toMatchObject(textWithCorsTemplate)
 })
 
 test('Build not found response', () => {
-  expect(_Response.notFound('Test Success')).toMatchObject({body: 'Test Success', headers: {}, statusCode: 404})
+  textTemplate.statusCode = 404
+  
+  expect(_Response.notFound('Test Success')).toMatchObject(textTemplate)
 })
 
 test('Build not found response with CORS', () => {
-  expect(_Response.notFound('Test Success', true)).toMatchObject({"body": "Test Success", "headers": {"Access-Control-Allow-Credentials": true, "Access-Control-Allow-Origin": "*"}, "statusCode": 404})
+  textWithCorsTemplate.statusCode = 404
+
+  expect(_Response.notFound('Test Success', true)).toMatchObject(textWithCorsTemplate)
 })
 
 test('Build method not allowed response', () => {
-  expect(_Response.methodNotAllowed('Test Success')).toMatchObject({body: 'Test Success', headers: {}, statusCode: 405})
+  textTemplate.statusCode = 405
+
+  expect(_Response.methodNotAllowed('Test Success')).toMatchObject(textTemplate)
 })
 
 test('Build method not allowed response with CORS', () => {
-  expect(_Response.methodNotAllowed('Test Success', true)).toMatchObject({"body": "Test Success", "headers": {"Access-Control-Allow-Credentials": true, "Access-Control-Allow-Origin": "*"}, "statusCode": 405})
+  textWithCorsTemplate.statusCode = 405
+
+  expect(_Response.methodNotAllowed('Test Success', true)).toMatchObject(textWithCorsTemplate)
 })
