@@ -8,7 +8,7 @@
     "aws",
     "aws-lambda",
     "aws-apigateway",
-    "aws-api-gateway",
+    "aws-api-gateway"
   ],
   "homepage": "https://github.com/LifiPlus/node-serverless-response",
   "url": "https://github.com/LifiPlus/node-serverless-response/issues",
