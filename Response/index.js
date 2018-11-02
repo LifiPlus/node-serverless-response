@@ -49,7 +49,7 @@ class Response {
    * @return {Object|String} - Please see {@link _buildResponse} for more detail
    */
   success (body, isCors = false) {
-    return this._buildResponse (200, body, isCors)
+    return this._buildResponse(200, body, isCors)
   }
 
   /**
@@ -59,7 +59,7 @@ class Response {
    * @return {Object|String} - Please see {@link _buildResponse} for more detail
    */
   badRequest (body, isCors = false) {
-    return this._buildResponse (400, body, isCors)
+    return this._buildResponse(400, body, isCors)
   }
 
   /**
@@ -69,7 +69,7 @@ class Response {
    * @return {Object|String} - Please see {@link _buildResponse} for more detail
    */
   unauthorized (body, isCors = false) {
-    return this._buildResponse (401, body, isCors)
+    return this._buildResponse(401, body, isCors)
   }
 
   /**
@@ -79,7 +79,7 @@ class Response {
    * @return {Object|String} - Please see {@link _buildResponse} for more detail
    */
   forbidden (body, isCors = false) {
-    return this._buildResponse (403, body, isCors)
+    return this._buildResponse(403, body, isCors)
   }
 
   /**
@@ -89,7 +89,7 @@ class Response {
    * @return {Object|String} - Please see {@link _buildResponse} for more detail
    */
   notFound (body, isCors = false) {
-    return this._buildResponse (404, body, isCors)
+    return this._buildResponse(404, body, isCors)
   }
 
   /**
@@ -99,7 +99,7 @@ class Response {
    * @return {Object|String} - Please see {@link _buildResponse} for more detail
    */
   methodNotAllowed (body, isCors = false) {
-    return this._buildResponse (405, body, isCors)
+    return this._buildResponse(405, body, isCors)
   }
 
   /**
@@ -109,7 +109,7 @@ class Response {
    * @return {Object|String} - Please see {@link _buildResponse} for more detail
    */
   tooManyRequests (body, isCors = false) {
-    return this._buildResponse (429, body, isCors)
+    return this._buildResponse(429, body, isCors)
   }
 
   /**
@@ -119,7 +119,7 @@ class Response {
    * @return {Object|String} - Please see {@link _buildResponse} for more detail
    */
   internalError (body, isCors = false) {
-    return this._buildResponse (500, body, isCors)
+    return this._buildResponse(500, body, isCors)
   }
 }
 
