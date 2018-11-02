@@ -4,5 +4,7 @@ node_js:
 
 install:
   - yarn install
+before_script
+  - yarn eslint
 script:
   - yarn test
