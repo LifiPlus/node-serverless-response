@@ -15,6 +15,7 @@
   "main": "index.js",
   "scripts": {
     "esdoc": "esdoc",
+    "eslint": "eslint ./Response --fix",
     "test": "jest"
   },
   "repository": "https://github.com/LifiPlus/node-serverless-response.git",
