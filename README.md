@@ -2,7 +2,7 @@
 
 # node-serverless-response
 
-Simply to generate HTTP response payload
+If you are using the serverless framework to develop your micro service, this package can help you to generate the HTTP response payload.
 
 # Installing
 
@@ -16,4 +16,29 @@ Yarn
 
 ```
 yarn add node-serverless-response
+```
+
+# Example
+
+
+## General
+
+```
+const Response = require('node-serverless-response')
+const _Response = new Response()
+
+export.handler = async (event, context, callback) => {
+  return _Response.success('Hello World!')
+}
+```
+
+## Support CORS
+
+```
+const Response = require('node-serverless-response')
+const _Response = new Response()
+
+export.handler = async (event, context, callback) => {
+  return _Response.success('Hello World!', true)
+}
 ```
