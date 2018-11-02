@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 - None
 
+## [1.1.1] - 2018-11-02
+### Added
+- ESLint
+- JSON response
+
+### Changed
+- Optimize testing code
+- Upgrade ESLint version
+
+### Removed
+- None
+
 ## [1.1.0] - 2018-10-29
 ### Added
 - Add jest testing

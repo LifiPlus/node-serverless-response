@@ -1,6 +1,6 @@
 {
   "name": "node-serverless-response",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Serverless Framework Http Response Helper",
   "keywords": [
     "serverless",
